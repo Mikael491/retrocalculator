@@ -20,7 +20,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="space-bg" translatesAutoresizingMaskIntoConstraints="NO" id="jJY-Xd-xpb"/>
@@ -39,52 +39,79 @@
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="ylK-W9-ewI">
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pam-6O-ItB">
+                                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pam-6O-ItB">
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="58" id="dQg-1J-Uhp"/>
                                                     <constraint firstAttribute="width" constant="56" id="iu9-xn-55o"/>
                                                 </constraints>
                                                 <state key="normal" title="Button" image="7"/>
+                                                <connections>
+                                                    <action selector="calculatorButtonPressedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P4u-7R-ELY"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v66-V7-HRO">
+                                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v66-V7-HRO">
                                                 <state key="normal" title="Button" image="8"/>
+                                                <connections>
+                                                    <action selector="calculatorButtonPressedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wqE-mI-RGs"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6qJ-Ue-pc7">
+                                            <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6qJ-Ue-pc7">
                                                 <state key="normal" title="Button" image="9"/>
+                                                <connections>
+                                                    <action selector="calculatorButtonPressedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jnr-YL-Y39"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Tu5-ao-EpX">
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W3g-NE-DfT">
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W3g-NE-DfT">
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="56" id="Cgw-gr-Y1m"/>
                                                     <constraint firstAttribute="height" constant="58" id="K6C-yz-dtm"/>
                                                 </constraints>
                                                 <state key="normal" title="Button" image="4"/>
+                                                <connections>
+                                                    <action selector="calculatorButtonPressedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lWZ-kd-1eS"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x1B-Lo-Iv6">
+                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x1B-Lo-Iv6">
                                                 <state key="normal" title="Button" image="5"/>
+                                                <connections>
+                                                    <action selector="calculatorButtonPressedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Ay-TB-LFC"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ubq-eC-38G">
+                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ubq-eC-38G">
                                                 <state key="normal" title="Button" image="6"/>
+                                                <connections>
+                                                    <action selector="calculatorButtonPressedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="odi-Ps-1fA"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="CkF-Iv-Vik">
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MYL-zd-TIB">
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MYL-zd-TIB">
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="56" id="gpl-FG-zda"/>
                                                     <constraint firstAttribute="height" constant="58" id="t18-6h-MiO"/>
                                                 </constraints>
                                                 <state key="normal" title="Button" image="1"/>
+                                                <connections>
+                                                    <action selector="calculatorButtonPressedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qP6-H1-opv"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G0I-bU-Gea">
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G0I-bU-Gea">
                                                 <state key="normal" title="Button" image="2"/>
+                                                <connections>
+                                                    <action selector="calculatorButtonPressedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3f7-Rw-NgF"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nJa-Xg-K6E">
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nJa-Xg-K6E">
                                                 <state key="normal" title="Button" image="3"/>
+                                                <connections>
+                                                    <action selector="calculatorButtonPressedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="stN-1w-Iwk"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -96,6 +123,9 @@
                                                     <constraint firstAttribute="width" constant="56" id="fEN-Ab-Qf0"/>
                                                 </constraints>
                                                 <state key="normal" title="Button" image="0"/>
+                                                <connections>
+                                                    <action selector="calculatorButtonPressedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CtH-l4-gmY"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="klW-LK-2b9">
                                                 <state key="normal" title="Button" image="divide"/>
@@ -162,7 +192,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="140.625" y="138.38028169014083"/>
+            <point key="canvasLocation" x="276" y="134"/>
         </scene>
     </scenes>
     <resources>

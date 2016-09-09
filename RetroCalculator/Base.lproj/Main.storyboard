@@ -5,6 +5,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Minecraft.ttf">
+            <string>Minecraft</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -15,7 +20,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="space-bg" translatesAutoresizingMaskIntoConstraints="NO" id="jJY-Xd-xpb"/>
@@ -124,6 +129,15 @@
                                     <constraint firstAttribute="height" constant="65" id="oip-x6-j4l"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3500" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BB9-ct-rSM">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="9z3-ju-65O"/>
+                                    <constraint firstAttribute="height" constant="25" id="mG2-OL-4MO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Minecraft" family="Minecraft" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -131,8 +145,10 @@
                             <constraint firstAttribute="trailing" secondItem="557-Gt-AQV" secondAttribute="trailing" id="Idl-6i-cM3"/>
                             <constraint firstAttribute="trailing" secondItem="jJY-Xd-xpb" secondAttribute="trailing" id="KjV-Do-bSl"/>
                             <constraint firstItem="2Ma-qG-vyd" firstAttribute="centerY" secondItem="uMs-5n-Pkk" secondAttribute="centerY" id="NGh-08-rIm"/>
+                            <constraint firstItem="BB9-ct-rSM" firstAttribute="centerX" secondItem="UD0-9o-j1z" secondAttribute="centerX" id="Ob0-Ad-W1d"/>
                             <constraint firstItem="uMs-5n-Pkk" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="30" id="UvJ-Pd-Ax8"/>
                             <constraint firstItem="jJY-Xd-xpb" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Vj6-kO-rdD"/>
+                            <constraint firstItem="BB9-ct-rSM" firstAttribute="centerY" secondItem="UD0-9o-j1z" secondAttribute="centerY" id="Vtd-9j-bsm"/>
                             <constraint firstItem="jJY-Xd-xpb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="cgc-EK-kd6"/>
                             <constraint firstAttribute="bottom" secondItem="jJY-Xd-xpb" secondAttribute="bottom" id="chN-7y-YAm"/>
                             <constraint firstAttribute="bottom" secondItem="557-Gt-AQV" secondAttribute="bottom" id="iUN-NF-OUn"/>
@@ -146,7 +162,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="140.625" y="138.75"/>
+            <point key="canvasLocation" x="140.625" y="138.38028169014083"/>
         </scene>
     </scenes>
     <resources>

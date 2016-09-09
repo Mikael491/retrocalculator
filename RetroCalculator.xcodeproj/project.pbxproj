@@ -12,6 +12,7 @@
 		FC47087B1D82245F00C2CD89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC4708791D82245F00C2CD89 /* Main.storyboard */; };
 		FC47087D1D82246000C2CD89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC47087C1D82246000C2CD89 /* Assets.xcassets */; };
 		FC4708801D82246000C2CD89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC47087E1D82246000C2CD89 /* LaunchScreen.storyboard */; };
+		FC4708891D82409300C2CD89 /* Minecraft.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FC4708881D82409300C2CD89 /* Minecraft.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		FC47087C1D82246000C2CD89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC47087F1D82246000C2CD89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC4708811D82246000C2CD89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC4708881D82409300C2CD89 /* Minecraft.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Minecraft.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		FC4708741D82245F00C2CD89 /* RetroCalculator */ = {
 			isa = PBXGroup;
 			children = (
+				FC4708871D82407700C2CD89 /* OutsideResources */,
 				FC4708751D82245F00C2CD89 /* AppDelegate.swift */,
 				FC4708771D82245F00C2CD89 /* ViewController.swift */,
 				FC4708791D82245F00C2CD89 /* Main.storyboard */,
@@ -62,6 +65,14 @@
 				FC4708811D82246000C2CD89 /* Info.plist */,
 			);
 			path = RetroCalculator;
+			sourceTree = "<group>";
+		};
+		FC4708871D82407700C2CD89 /* OutsideResources */ = {
+			isa = PBXGroup;
+			children = (
+				FC4708881D82409300C2CD89 /* Minecraft.ttf */,
+			);
+			name = OutsideResources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +137,7 @@
 			files = (
 				FC4708801D82246000C2CD89 /* LaunchScreen.storyboard in Resources */,
 				FC47087D1D82246000C2CD89 /* Assets.xcassets in Resources */,
+				FC4708891D82409300C2CD89 /* Minecraft.ttf in Resources */,
 				FC47087B1D82245F00C2CD89 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

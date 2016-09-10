@@ -9,21 +9,23 @@
 import UIKit
 import AVFoundation
 
-enum Operation: String {
-    case Add = "+"
-    case Subtraction = "-"
-    case Multiply = "*"
-    case Divide = "/"
-    case Empty = ""
-}
-
 class ViewController: UIViewController {
     
     @IBOutlet weak var outputLbl: UILabel!
     
+    enum Operation: String {
+        case Add = "+"
+        case Subtraction = "-"
+        case Multiply = "*"
+        case Divide = "/"
+        case Empty = ""
+    }
     
     var currentOperation = Operation.Empty
     var runningNumber = ""
+    var leftSideNumber = ""
+    var rightSideNumber = ""
+    
     
     var btnSound: AVAudioPlayer!
     
@@ -36,6 +38,7 @@ class ViewController: UIViewController {
         do {
             try btnSound = AVAudioPlayer(contentsOf: btnSoundURL)
         } catch let err as NSError {
+            print("Hit Error...")
             print(err.localizedDescription)
         }
         
@@ -49,6 +52,23 @@ class ViewController: UIViewController {
         outputLbl.text = runningNumber
     }
     
+    
+    @IBAction func multiplyPressed(sender: UIButton) {
+        processOperation(operator: .Multiply)
+    }
+    
+    @IBAction func subtractPressed(sender: UIButton) {
+        processOperation(operator: .Subtraction)
+    }
+    
+    @IBAction func addPressed(sender: UIButton) {
+        processOperation(operator: .Add)
+    }
+    
+    @IBAction func dividePressed(sender: UIButton) {
+        processOperation(operator: .Divide)
+    }
+    
     func playSound() {
         if btnSound.isPlaying {
             btnSound.stop()
@@ -56,4 +76,67 @@ class ViewController: UIViewController {
         btnSound.play()
     }
     
+    
+    func processOperation(operator: Operation) {
+        if currentOperation != Operation.Empty {
+            
+            //TODO: process math logic
+            if runningNumber != "" {
+                
+                
+                
+            }
+        }
+    }
+    
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

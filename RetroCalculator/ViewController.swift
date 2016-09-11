@@ -123,6 +123,7 @@ class ViewController: UIViewController {
         leftSideNumber = ""
         rightSideNumber = ""
         result = ""
+        outputLbl.text = "0.0"
     }
     
 }//END class

@@ -74,6 +74,11 @@ class ViewController: UIViewController {
         processOperation(operation: currentOperation)
     }
     
+    @IBAction func clearPressed() {
+        //clear and reset all values and operation
+        reset()
+    }
+    
     func playSound() {
         if btnSound.isPlaying {
             btnSound.stop()
@@ -111,6 +116,14 @@ class ViewController: UIViewController {
             currentOperation = operation
         }
     }//END func
+    
+    func reset() {
+        currentOperation = Operation.Empty
+        runningNumber = ""
+        leftSideNumber = ""
+        rightSideNumber = ""
+        result = ""
+    }
     
 }//END class
 

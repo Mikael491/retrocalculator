@@ -9,29 +9,29 @@
 import UIKit
 import AVFoundation
 
+enum Operation: String {
+    case Add = "+"
+    case Subtraction = "-"
+    case Multiply = "*"
+    case Divide = "/"
+    case Empty = ""
+}
+
 class ViewController: UIViewController {
     
     @IBOutlet weak var outputLbl: UILabel!
-    
-    enum Operation: String {
-        case Add = "+"
-        case Subtraction = "-"
-        case Multiply = "*"
-        case Divide = "/"
-        case Empty = ""
-    }
     
     var currentOperation = Operation.Empty
     var runningNumber = ""
     var leftSideNumber = ""
     var rightSideNumber = ""
-    
+    var result = ""
     
     var btnSound: AVAudioPlayer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        outputLbl.text = "0.0"
         let btnSoundPath = Bundle.main.path(forResource: "btn", ofType: "wav")
         let btnSoundURL = URL(fileURLWithPath: btnSoundPath!)
         
@@ -47,26 +47,31 @@ class ViewController: UIViewController {
     
     @IBAction func numberPressed (sender: UIButton) {
         playSound()
-        
         runningNumber += "\(sender.tag)"
         outputLbl.text = runningNumber
     }
     
     
     @IBAction func multiplyPressed(sender: UIButton) {
-        processOperation(operator: .Multiply)
+        processOperation(operation: .Multiply)
     }
     
     @IBAction func subtractPressed(sender: UIButton) {
-        processOperation(operator: .Subtraction)
+
+        processOperation(operation: .Subtraction)
     }
     
     @IBAction func addPressed(sender: UIButton) {
-        processOperation(operator: .Add)
+        processOperation(operation: .Add)
     }
     
     @IBAction func dividePressed(sender: UIButton) {
-        processOperation(operator: .Divide)
+        processOperation(operation: .Divide)
+    }
+    
+    @IBAction func equalsPressed(sender: UIButton) {
+        //solve math logic here using both values
+        processOperation(operation: currentOperation)
     }
     
     func playSound() {
@@ -76,20 +81,38 @@ class ViewController: UIViewController {
         btnSound.play()
     }
     
-    
-    func processOperation(operator: Operation) {
-        if currentOperation != Operation.Empty {
-            
-            //TODO: process math logic
+    //logic for deciding to equate operation or not
+    func processOperation(operation: Operation) {
+        playSound()
+        if currentOperation != .Empty {
+            //process operation
             if runningNumber != "" {
+                rightSideNumber = runningNumber
+                runningNumber = ""
                 
+                if currentOperation == Operation.Multiply {
+                    result = "\(Double(leftSideNumber)! * Double(rightSideNumber)!)"
+                } else if currentOperation == Operation.Divide {
+                    result = "\(Double(leftSideNumber)! / Double(rightSideNumber)!)"
+                } else if currentOperation == Operation.Subtraction {
+                    result = "\(Double(leftSideNumber)! - Double(rightSideNumber)!)"
+                } else if currentOperation == Operation.Add {
+                    result = "\(Double(leftSideNumber)! + Double(rightSideNumber)!)"
+                }
                 
-                
+                leftSideNumber = result
+                outputLbl.text = result
             }
+            currentOperation = operation
+        } else {
+            //first time operator was selected
+            leftSideNumber = runningNumber
+            runningNumber = ""
+            currentOperation = operation
         }
-    }
+    }//END func
     
-}
+}//END class
 
 
 

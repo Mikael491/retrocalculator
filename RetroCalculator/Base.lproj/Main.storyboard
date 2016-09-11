@@ -20,7 +20,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="space-bg" translatesAutoresizingMaskIntoConstraints="NO" id="jJY-Xd-xpb"/>
@@ -46,7 +46,6 @@
                                                 </constraints>
                                                 <state key="normal" title="Button" image="7"/>
                                                 <connections>
-                                                    <action selector="calculatorButtonPressedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P4u-7R-ELY"/>
                                                     <action selector="numberPressedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Wt-Qb-yry"/>
                                                 </connections>
                                             </button>
@@ -162,6 +161,9 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1iH-AL-mlW">
                                                 <state key="normal" title="Button" image="equal"/>
+                                                <connections>
+                                                    <action selector="equalsPressedWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nj3-mo-XXy"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -172,7 +174,7 @@
                                     <constraint firstAttribute="height" constant="65" id="oip-x6-j4l"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3500" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BB9-ct-rSM">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BB9-ct-rSM">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="9z3-ju-65O"/>
                                     <constraint firstAttribute="height" constant="25" id="mG2-OL-4MO"/>

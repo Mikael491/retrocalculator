@@ -79,6 +79,7 @@ class ViewController: UIViewController {
         reset()
     }
     
+    //soundfunction for playing button audio
     func playSound() {
         if btnSound.isPlaying {
             btnSound.stop()
